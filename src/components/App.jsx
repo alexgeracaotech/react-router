@@ -1,40 +1,25 @@
 
 import './App.css';
-import Home from '../pages/Home.jsx';
-import Products from '../pages/Products.jsx';
-import About from '../pages/About.jsx';
+import AppRoutes from '../routes.jsx';
+import { Link } from 'react-router-dom';
 
 const App = () => {
-
-  // let component;
-
-  // switch (window.location.pathname) {
-  //   case '/':
-  //     component = <Home />;
-  //     break;
-  //   case '/products':
-  //     component = <Products />;
-  //     break;
-  //   case '/about':
-  //     component = <About />;
-  //     break;
-  // }
-
   return (
     <>
       <header>
-        <a href="/">Logo</a>
+        <Link to='/'>Logo</Link>
         <nav>
           <ul>
             <li>
-              <a href="/products">Products</a>
+              <Link to='/products'>Products</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to='/about'>About</Link>
             </li>
           </ul>
         </nav>
       </header>
+      <AppRoutes />
     </>
   );
 }
